@@ -5,8 +5,8 @@ services:
 before_install:
   - docker build -t thevivekpandey/docker-react -f Dockerfile.dev .
 
-#script:
-#  - docker run -e CI=true thevivekpandey/docker-react npm run test -- --coverage
+script:
+  - docker run -e CI=true thevivekpandey/docker-react npm run test -- --coverage
 
 deploy:
   - provider: elasticbeanstalk
